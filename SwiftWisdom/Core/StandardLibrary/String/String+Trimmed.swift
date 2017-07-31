@@ -10,10 +10,6 @@ import Foundation
 
 extension String {
     func ip_trimmed(toLength length: Int) -> String {
-        if ip_length > length {
-            return substring(to: index(startIndex, offsetBy: length))
-        } else {
-            return self
-        }
+        return String(characters.prefix(length))
     }
 }
